@@ -218,7 +218,7 @@ int main(void) {
     cv::fastNlMeansDenoisingColored(img, img);
 
     cv::cvtColor(img, img_gray, cv::COLOR_BGR2GRAY);
-    
+    std::cout<<"마우스로 마커(seed) 영역을 왼쪽 마우스 클릭 또는 드래그해서 지정하세요.\n thickness로 seed의 크기를 지정할 수 있습니다.\n오른쪽 마우스 클릭으로 label을 변경할 수 있습니다. esc로 마킹을 끝낼 수 있습니다.\n\n"<< std::endl;
     mask = img_gray.clone();
     mask = 0;
     std::cout << state << "번째 마커" << std::endl;
